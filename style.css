@@ -1,0 +1,153 @@
+:root {
+  --murekkep: #1c2431; /* koyu metin */
+  --kagit: #fbfaf7; /* zemin */
+  --gri: #6b7280; /* ikincil metin */
+  --vurgu: #2f6f4f; /* tek vurgu rengi: koyu yeşil */
+  --cizgi: #e4e2db;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background: var(--kagit);
+  color: var(--murekkep);
+  line-height: 1.7;
+}
+
+.sayfa {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 64px 24px 80px;
+}
+
+/* Üst kısım */
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+.etiket {
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--vurgu);
+}
+
+h1 {
+  font-size: clamp(36px, 7vw, 52px);
+  font-weight: 400;
+  margin: 8px 0 16px;
+  line-height: 1.15;
+}
+
+.tanitim {
+  font-size: 18px;
+  color: var(--gri);
+  max-width: 48ch;
+}
+
+/* Dil seçici */
+.dil-secici {
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+
+.dil-secici button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  text-transform: uppercase;
+  color: var(--gri);
+  cursor: pointer;
+}
+
+.dil-secici button:hover {
+  color: var(--murekkep);
+}
+
+.dil-secici button[aria-current="true"] {
+  color: var(--vurgu);
+  font-weight: 700;
+}
+
+.dil-secici button:focus-visible {
+  outline: 2px solid var(--vurgu);
+  outline-offset: 3px;
+}
+
+.dil-secici .ayrac {
+  color: var(--cizgi);
+}
+
+/* Bölümler */
+section {
+  margin-top: 56px;
+  padding-top: 32px;
+  border-top: 1px solid var(--cizgi);
+}
+
+h2 {
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--gri);
+  margin-bottom: 20px;
+}
+
+.madde {
+  margin-bottom: 24px;
+}
+
+.madde h3 {
+  font-size: 19px;
+  font-weight: 400;
+}
+
+.madde p {
+  color: var(--gri);
+  font-size: 16px;
+}
+
+a {
+  color: var(--vurgu);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+a:focus-visible {
+  outline: 2px solid var(--vurgu);
+  outline-offset: 3px;
+}
+
+/* İletişim satırı */
+.iletisim {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  font-size: 16px;
+}
+
+footer {
+  margin-top: 72px;
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  color: var(--gri);
+}

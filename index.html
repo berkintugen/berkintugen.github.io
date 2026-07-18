@@ -1,156 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adınız Soyadınız</title>
-  <style>
-    :root {
-      --murekkep: #1c2431;   /* koyu metin */
-      --kagit: #fbfaf7;      /* zemin */
-      --gri: #6b7280;        /* ikincil metin */
-      --vurgu: #2f6f4f;      /* tek vurgu rengi: koyu yeşil */
-      --cizgi: #e4e2db;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Berkin Ekin Tügen</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="sayfa">
+      <header>
+        <nav class="dil-secici" aria-label="Language selector">
+          <button type="button" data-lang="tr">TR</button>
+          <span class="ayrac" aria-hidden="true">·</span>
+          <button type="button" data-lang="en">EN</button>
+          <span class="ayrac" aria-hidden="true">·</span>
+          <button type="button" data-lang="de">DE</button>
+        </nav>
+        <h1>Berkin Ekin Tügen</h1>
+        <p class="tanitim" data-i18n="tagline">Mechatronics Engineer</p>
+      </header>
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+      <section>
+        <h2 data-i18n="about_title">About me</h2>
+        <p data-i18n="about_text">
+          I build software solutions for manufacturing and logistics.
+          Full-stack developer and database administrator.
+        </p>
+      </section>
 
-    body {
-      font-family: Georgia, 'Times New Roman', serif;
-      background: var(--kagit);
-      color: var(--murekkep);
-      line-height: 1.7;
-    }
+      <section>
+        <h2 data-i18n="work_title">What I do</h2>
+        <div class="madde">
+          <h3 data-i18n="item1_title">Shopfloor management systems</h3>
+          <p>
+            <span data-i18n="item1_text"
+              >Integrated with your ERP, available on desktop and
+              mobile.</span
+            >
+            <a href="#" data-i18n="item1_link">Learn more</a>
+          </p>
+        </div>
+        <div class="madde">
+          <h3 data-i18n="item2_title">AI-powered automated workflows</h3>
+          <p data-i18n="item2_text">
+            Quality assurance systems and AI-driven call center agents.
+          </p>
+        </div>
+      </section>
 
-    .sayfa {
-      max-width: 640px;
-      margin: 0 auto;
-      padding: 64px 24px 80px;
-    }
+      <section>
+        <h2 data-i18n="contact_title">Contact</h2>
+        <div class="iletisim">
+          <a href="mailto:berkintugen@gmail.com">berkintugen@gmail.com</a>
+          <a href="https://www.linkedin.com/in/berkinekintugen/">LinkedIn</a>
+          <a href="https://github.com/berkintugen">GitHub</a>
+        </div>
+      </section>
 
-    /* Üst kısım */
-    .etiket {
-      font-family: 'Courier New', monospace;
-      font-size: 13px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--vurgu);
-    }
+      <footer>© 2026 Berkin Ekin Tügen</footer>
+    </div>
 
-    h1 {
-      font-size: clamp(36px, 7vw, 52px);
-      font-weight: 400;
-      margin: 8px 0 16px;
-      line-height: 1.15;
-    }
-
-    .tanitim {
-      font-size: 18px;
-      color: var(--gri);
-      max-width: 48ch;
-    }
-
-    /* Bölümler */
-    section {
-      margin-top: 56px;
-      padding-top: 32px;
-      border-top: 1px solid var(--cizgi);
-    }
-
-    h2 {
-      font-family: 'Courier New', monospace;
-      font-size: 13px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-weight: 700;
-      color: var(--gri);
-      margin-bottom: 20px;
-    }
-
-    .madde {
-      margin-bottom: 24px;
-    }
-
-    .madde h3 {
-      font-size: 19px;
-      font-weight: 400;
-    }
-
-    .madde p {
-      color: var(--gri);
-      font-size: 16px;
-    }
-
-    a {
-      color: var(--vurgu);
-      text-decoration-thickness: 1px;
-      text-underline-offset: 3px;
-    }
-
-    a:hover { text-decoration: none; }
-    a:focus-visible { outline: 2px solid var(--vurgu); outline-offset: 3px; }
-
-    /* İletişim satırı */
-    .iletisim {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px 24px;
-      font-size: 16px;
-    }
-
-    footer {
-      margin-top: 72px;
-      font-family: 'Courier New', monospace;
-      font-size: 12px;
-      color: var(--gri);
-    }
-  </style>
-</head>
-<body>
-  <div class="sayfa">
-
-    <header>
-      <p class="etiket">Kişisel site</p>
-      <h1>Adınız Soyadınız</h1>
-      <p class="tanitim">
-        Buraya kendinizi bir-iki cümleyle tanıtın. Ne yapıyorsunuz,
-        nelerle ilgileniyorsunuz, insanlar sizi neden tanımalı?
-      </p>
-    </header>
-
-    <section>
-      <h2>Hakkımda</h2>
-      <p>
-        Kendinizle ilgili biraz daha detay. Eğitim, iş, hobiler…
-        Kısa tutun; merak eden size ulaşır.
-      </p>
-    </section>
-
-    <section>
-      <h2>Neler Yapıyorum</h2>
-      <div class="madde">
-        <h3>Proje ya da iş 1</h3>
-        <p>Bir cümlelik açıklama. İsterseniz <a href="#">bağlantı</a> ekleyin.</p>
-      </div>
-      <div class="madde">
-        <h3>Proje ya da iş 2</h3>
-        <p>Bir cümlelik açıklama.</p>
-      </div>
-    </section>
-
-    <section>
-      <h2>İletişim</h2>
-      <div class="iletisim">
-        <a href="mailto:ornek@eposta.com">ornek@eposta.com</a>
-        <a href="https://linkedin.com/in/kullaniciadi">LinkedIn</a>
-        <a href="https://github.com/kullaniciadi">GitHub</a>
-      </div>
-    </section>
-
-    <footer>
-      © 2026 Adınız Soyadınız
-    </footer>
-
-  </div>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
