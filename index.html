@@ -8,47 +8,68 @@
   </head>
   <body>
     <div class="sayfa">
-      <header>
-        <nav class="dil-secici" aria-label="Language selector">
-          <button type="button" data-lang="tr">TR</button>
-          <span class="ayrac" aria-hidden="true">·</span>
-          <button type="button" data-lang="en">EN</button>
-          <span class="ayrac" aria-hidden="true">·</span>
-          <button type="button" data-lang="de">DE</button>
-        </nav>
-        <h1>Berkin Ekin Tügen</h1>
-        <p class="tanitim" data-i18n="tagline">Mechatronics Engineer</p>
+      <nav class="ust-nav" aria-label="Ana navigasyon">
+        <a href="#" class="marka">Berkin Ekin Tügen</a>
+        <div class="ust-nav-baglantilar">
+          <a href="#hakkimda" data-i18n="nav_about">About</a>
+          <a href="#projeler" data-i18n="nav_projects">Projects</a>
+          <a href="#iletisim" data-i18n="nav_contact">Contact</a>
+          <div class="dil-secici" aria-label="Language selector">
+            <button type="button" data-lang="tr">TR</button>
+            <span class="ayrac" aria-hidden="true">·</span>
+            <button type="button" data-lang="en">EN</button>
+            <span class="ayrac" aria-hidden="true">·</span>
+            <button type="button" data-lang="de">DE</button>
+          </div>
+        </div>
+      </nav>
+
+      <header class="hero">
+        <h1 data-i18n="hero_title">Mechatronics Engineer</h1>
+        <p class="tanitim" data-i18n="hero_text">
+          I build software for manufacturing and logistics — shopfloor systems,
+          AI-powered workflows, and everything in between.
+        </p>
       </header>
 
-      <section>
+      <section id="hakkimda">
+        <span class="bolum-etiket" data-i18n="about_label">About</span>
         <h2 data-i18n="about_title">About me</h2>
         <p data-i18n="about_text">
-          I build software solutions for manufacturing and logistics.
-          Full-stack developer and database administrator.
+          I build software solutions for manufacturing and logistics. Full-stack
+          developer and database administrator.
         </p>
       </section>
 
-      <section>
+      <section id="hizmetler">
+        <span class="bolum-etiket" data-i18n="work_label">Services</span>
         <h2 data-i18n="work_title">What I do</h2>
-        <div class="madde">
-          <h3 data-i18n="item1_title">Shopfloor management systems</h3>
-          <p>
-            <span data-i18n="item1_text"
-              >Integrated with your ERP, available on desktop and
-              mobile.</span
-            >
-            <a href="#" data-i18n="item1_link">Learn more</a>
-          </p>
-        </div>
-        <div class="madde">
-          <h3 data-i18n="item2_title">AI-powered automated workflows</h3>
-          <p data-i18n="item2_text">
-            Quality assurance systems and AI-driven call center agents.
-          </p>
+        <div class="hizmet-izgara">
+          <div class="madde">
+            <h3 data-i18n="item1_title">Shopfloor management systems</h3>
+            <p data-i18n="item1_text">
+              Integrated with your ERP, available on desktop and mobile.
+            </p>
+          </div>
+          <div class="madde">
+            <h3 data-i18n="item2_title">AI-powered automated workflows</h3>
+            <p data-i18n="item2_text">
+              Quality assurance systems and AI-driven call center agents.
+            </p>
+          </div>
         </div>
       </section>
 
-      <section>
+      <section id="projeler">
+        <span class="bolum-etiket" data-i18n="projects_label">Portfolio</span>
+        <h2 data-i18n="projects_title">Projects</h2>
+        <div class="proje-izgara" id="proje-izgara">
+          <!-- Kartlar script.js tarafından doldurulur -->
+        </div>
+      </section>
+
+      <section id="iletisim">
+        <span class="bolum-etiket" data-i18n="contact_label">Get in touch</span>
         <h2 data-i18n="contact_title">Contact</h2>
         <div class="iletisim">
           <a href="mailto:berkintugen@gmail.com">berkintugen@gmail.com</a>
